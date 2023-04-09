@@ -87,6 +87,3 @@ target/
 
 # Mypy cache
 .mypy_cache/
-
-#git limitation 
-.models/skip_model.pkl

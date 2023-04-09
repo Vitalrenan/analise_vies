@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+<div class='parent'><div class="magicpattern"/>
+ <div class="login">
+	<h1>Análise de Viés</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('pipe')}}"method="post">
+    	<input type="text" name="titulo" placeholder="Digite a palavra a ser analisada" required="required" />
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Enviar</button>
+    </form>
+
+   <br>
+   <br>
+   {{ title }}
+   <br>
+   <br>
+   {{ category_1 }}
+   <br>
+   {{ category_2 }}
+   <br>
+   {{ category_3 }}
+   <br>
+   {{ category_4 }}
+   <br>
+   {{ category_5 }}
+   <br>
+   {{ category_6 }}
+   <br>
+   {{ category_7 }}
+   <br>
+   {{ category_8 }}
+ </div>
+ <div class="box">
+  <p>As máquinas de inteligência artificial que são capazes de se comunicar com humanos, consistem em modelos de aprendizado de máquina com processamento de linguagem natural - PLN. Esses modelos requerem um vasto banco de dados chamado de Corpus, onde estão organizados e estruturados diversos textos de notícias, livros, artigos científicos entre outras fontes. Os modelos de PLN geralmente utilizam arquiteturas de redes neurais - Deep learning para fazer as inferências e gerar textos a partir do Corpus, e sua performance se relaciona com a quantidade de informação no corpus. Por fim, para adquirir um volume de dados necessário para o bom funcionamento dos modelos, os Corpus contam majoritariamente com notícias e textos editoriais, que muitas vezes trazem de forma sutil ou não preconceitos e discriminação entre classes sociais, raças e gêneros.</p>
+  <p>Este projeto tem por objetivo conscientizar a sociedade de forma empírica sobre o viés intrínseco dos modelos de PLN. Ao digitar uma palavra ou texto e submeter a análise, o modelo retornará as 8 palavras semanticamente mais próximas do conteúdo enviado, de acordo com o Corpus treinado pelo modelo de PLN.</p> 
+  <p>Este corpus foi desenvolvido pelo Laboratório de linguística e inteligência computacional LALIC da Universidade de São Paulo - USP.</p>
+  </div>
+</div>
+
+</body>
+</html>
